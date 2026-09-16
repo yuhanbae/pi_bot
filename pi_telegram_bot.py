@@ -14,7 +14,7 @@ Features:
 import json, time, subprocess, requests, os
 from pathlib import Path
 
-BOT_TOKEN = os.environ.get("BOT_TOKEN", "")  # or edit directly here
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "")  # MUST set via environment variable - never hardcode
 _SESSION = requests.Session()
 _SESSION.headers.update({"User-Agent": "pi-telegram-bot/1.0"})
 ALLOWED_USERS = {321127799}

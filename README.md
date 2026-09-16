@@ -9,14 +9,28 @@ Contains Telegram ↔ Pi Coding Agent integration with UI/UX upgrades.
 - pi_telegram_mirror_best.py
 - pi_telegram_bot_commands.py
 - telegram_bot_startup.py
+- pi_telegram_bot_vulkan.py (Vulkan-accelerated variant)
 
 ## Usage
-Set BOT_TOKEN and ALLOWED_USERS, then run `python3 pi_telegram_bot.py`
-
-## Setup
-
-1. Copy your bot token into each file (`BOT_TOKEN`) or export it:
+1. Set your Bot Token:
    ```bash
-   export BOT_TOKEN="..."
+   export BOT_TOKEN="YOUR_TELEGRAM_BOT_TOKEN"
    ```
-2. Set `ALLOWED_USERS` to your Telegram user ID(s).
+2. Set allowed users (your Telegram user ID):
+   ```bash
+   export ALLOWED_USERS="321127799"
+   ```
+3. Run the bot:
+   ```bash
+   python3 pi_telegram_bot.py
+   ```
+
+## Security
+- **Never hardcode your BOT_TOKEN in the source files**
+- The token is read from the `BOT_TOKEN` environment variable
+- `ALLOWED_USERS` restricts bot access to specific Telegram user IDs
+
+## Vulkan Acceleration (Optional)
+- Install TVM-Vulkan and Mamba-Vulkan runtime for GPU acceleration
+- See `mamba-tvm-vulkan/` directory for details
+- Vulkan variant: `python3 pi_telegram_bot_vulkan.py`

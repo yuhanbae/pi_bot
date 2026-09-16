@@ -25,7 +25,7 @@ except ImportError:
     USING_VULKAN = False
     print("⚠️ Vulkan bridge not available, using pi subprocess")
 
-BOT_TOKEN = os.environ.get("BOT_TOKEN", "8913547823:AAGE_loDrvVcY1aSMhY6sv9drAkVZQh-I7k")
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
 _SESSION = requests.Session()
 _SESSION.headers.update({"User-Agent": "pi-telegram-bot/1.0"})
 ALLOWED_USERS = {321127799}
