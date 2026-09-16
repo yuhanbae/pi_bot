@@ -8,7 +8,7 @@ import subprocess
 import requests
 import json
 
-BOT_TOKEN = "YOUR_TELEGRAM_BOT_TOKEN"
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "")  # or edit directly here
 ALLOWED_USER_ID = 321127799
 API_URL = f"https://api.telegram.org/bot{BOT_TOKEN}"
 DEFAULT_MODEL = "nvidia/meta/muse-glimmer-30b"
